@@ -9,6 +9,10 @@
 
 }
 
+:root {
+    --main-color: #10cab7;
+}
+
 body {
     font-family: 'Work Sans', sans-serif, monospace;
     /* direction: rtl; */
@@ -122,6 +126,7 @@ body {
     min-width: 300px;
     /* to hide menu */
     display: none;
+    z-index: 1;
 }
 
 .header .links:hover ul {
@@ -138,23 +143,50 @@ body {
     top: -20px;
 
 }
-
-
 .header .links ul li a {
     display: block;
     text-decoration: none;
     color: #333;
     padding: 10px;
     transition: 300ms;
-
-
 }
 
 .header .links ul li a:hover {
     margin-left: 10px;
-
 }
 
 .header .links ul li:not(:last-child) a {
     border-bottom: 2px solid #eee;
 }
+
+/* end header */
+
+/* start landing */
+.landing {
+    background-image: url('https://elzerowebschool.github.io/HTML_And_CSS_Template_One/images/landing.jpg');
+    background-size: cover;
+    /* you should add space 100vh - 64px */
+    height: calc(100vh - 64px);
+}
+.landing .intro-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 320px;
+    max-width: 100%;
+
+}
+
+.landing .intro-text h1 {
+    margin: 0;
+    color: var(--main-color);
+    font-size: 3rem;
+}
+
+.landing .intro-text p {
+    margin: 0;
+    line-height: 1.8;
+}
+/* end landing */
